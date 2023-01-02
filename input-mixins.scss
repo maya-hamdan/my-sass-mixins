@@ -1,0 +1,30 @@
+
+@mixin placeholder($color, $font-size) {
+    &::-webkit-input-placeholder {
+        font-size: $font-size;
+        color: $color;
+    }
+
+    &:-moz-placeholder {
+        font-size: $font-size;
+        color: $color;
+    }
+
+    &::-moz-placeholder {
+        font-size: $font-size;
+        color: $color;
+    }
+
+    &:-ms-input-placeholder {
+        font-size: $font-size;
+        color: $color;
+    }
+}
+
+@mixin bootstrap-input-focus($color) {
+    &:focus {
+        border-color: $color;
+        box-shadow: 0 1px 1px $color inset, 0 0 8px $color;
+        outline: 0 none;
+    }
+}
