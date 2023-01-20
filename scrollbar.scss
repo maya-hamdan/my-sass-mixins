@@ -1,0 +1,26 @@
+@mixin scrollCustomize($width, $trackBg, $thumbBg, $thumbHoverBg, $trackRaduis, $thumbRaduis) {
+
+    /* width */
+    &::-webkit-scrollbar {
+        width: $width;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: $trackBg;
+        border-radius: $trackRaduis;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: $thumbBg;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        border-radius: $thumbRaduis;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: $thumbHoverBg;
+    }
+}
